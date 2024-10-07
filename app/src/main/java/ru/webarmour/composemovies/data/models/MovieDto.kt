@@ -1,6 +1,6 @@
 package ru.webarmour.composemovies.data.models
 
-data class MoviesDto(
+data class MovieDto(
     val _links: Links,
     val averageRuntime: Int,
     val dvdCountry: Any,
