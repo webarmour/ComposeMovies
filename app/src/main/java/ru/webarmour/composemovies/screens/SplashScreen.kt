@@ -23,12 +23,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import ru.webarmour.composemovies.MainViewModel
 import ru.webarmour.composemovies.navigation.Screens
 import ru.webarmour.composemovies.ui.theme.ComposeMoviesTheme
 
 
 @Composable
-fun SplashScreen(navController: NavController) {
+fun SplashScreen(navController: NavController, viewModel: MainViewModel) {
 
     var startAnimate by remember {
         mutableStateOf(false)
@@ -42,6 +43,7 @@ fun SplashScreen(navController: NavController) {
 
     LaunchedEffect(key1 = true) {
         startAnimate = true
+        viewModel.getAllMovies()
         delay(4000)
         navController.navigate(Screens.MainScreenRoute.route)
 
