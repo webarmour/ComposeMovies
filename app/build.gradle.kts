@@ -75,6 +75,8 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.9.2")
     implementation("androidx.compose.runtime:runtime-livedata:1.7.3")
 
+    implementation("io.coil-kt:coil-compose:1.3.2")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
